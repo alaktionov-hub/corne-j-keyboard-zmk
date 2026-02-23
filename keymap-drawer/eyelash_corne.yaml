@@ -208,7 +208,7 @@ layers:
   - RGB SPD
   - RGB BRI
   - RGB SPI
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(121,59,39)
   - RGB COLOR HSB(251,85,46)
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -233,8 +233,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SAI
+  - RGB SAD
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
