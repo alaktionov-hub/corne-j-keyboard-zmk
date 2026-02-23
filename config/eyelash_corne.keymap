@@ -61,6 +61,22 @@
         };
     };
 
+    macros {
+        tab_right: tab_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "TAB_RIGHT";
+        };
+
+        tab_left: tab_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>;
+            label = "TAB_LEFT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -91,10 +107,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&kp ESCAPE  &none       &none      &none       &none        &none                             &none         &kp PAGE_UP  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp LC(BACKSPACE)  &kp BSPC
+&trans      &none       &none      &none       &none        &kp PRINTSCREEN            &none  &none  &none  &kp PAGE_UP  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &kp LC(DELETE)     &kp DELETE
+&trans      &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none            &trans           &none         &kp INSERT   &kp K_APP           &tab_left       &tab_right     &kp PIPE           &trans
+                                   &trans      &trans       &kp SPACE                                       &kp RET      &mo 2               &mo 2
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -123,10 +139,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans        &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans                    &trans          &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans            &trans  &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &trans            &trans          &trans          &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &trans  &trans
+                              &trans     &trans  &trans                                    &trans          &trans          &trans
             >;
         };
 
