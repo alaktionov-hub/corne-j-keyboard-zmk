@@ -132,9 +132,9 @@
 
         layer_4 {
             bindings = <
-&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt BT_CLR  &out OUT_USB                    &trans          &rgb_ug RGB_ON   &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans  &rgb_ug RGB_COLOR_HSB(251,85,46)
-&trans        &trans        &trans        &trans        &trans      &trans                  &trans  &trans  &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans  &rgb_ug RGB_COLOR_HSB(163,35,94)
-&trans        &trans        &trans        &trans        &trans      &trans        &trans            &trans          &trans           &trans           &trans           &trans           &trans  &rgb_ug RGB_COLOR_HSB(352,77,47)
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt BT_CLR  &out OUT_USB                    &trans          &rgb_ug RGB_ON   &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_COLOR_HSB(121,59,39)  &rgb_ug RGB_COLOR_HSB(251,85,46)
+&trans        &trans        &trans        &trans        &trans      &trans                  &trans  &trans  &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans                            &rgb_ug RGB_COLOR_HSB(163,35,94)
+&trans        &trans        &trans        &trans        &trans      &trans        &trans            &trans          &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &trans           &trans           &trans                            &rgb_ug RGB_COLOR_HSB(352,77,47)
                                           &trans        &trans      &trans                                          &trans           &trans           &trans
             >;
         };
