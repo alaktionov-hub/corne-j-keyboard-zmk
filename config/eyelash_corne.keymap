@@ -79,10 +79,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp TILDE       &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&kp TAB         &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&kp LEFT_SHIFT  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                 &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&kp TILDE       &kp N1           &kp N2          &kp N3    &kp N4      &kp N5                           &none         &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&kp TAB         &kp EXCLAMATION  &kp AT_SIGN     &kp HASH  &kp DOLLAR  &kp PERCENT               &none  &none  &none  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&kp LEFT_SHIFT  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans    &trans      &rgb_ug RGB_EFF  &none           &none         &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                                                 &trans    &trans      &trans                                         &kp INS          &kp DEL          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -114,10 +114,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt BT_CLR  &out OUT_USB                    &trans          &rgb_ug RGB_ON   &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans  &rgb_ug RGB_COLOR_HSB(251,85,46)
+&trans        &trans        &trans        &trans        &trans      &trans                  &trans  &trans  &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans  &rgb_ug RGB_COLOR_HSB(163,35,94)
+&trans        &trans        &trans        &trans        &trans      &trans        &trans            &trans          &trans           &trans           &trans           &trans           &trans  &rgb_ug RGB_COLOR_HSB(352,77,47)
+                                          &trans        &trans      &trans                                          &trans           &trans           &trans
             >;
         };
 
