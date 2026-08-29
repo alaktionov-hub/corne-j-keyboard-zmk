@@ -1,0 +1,16 @@
+if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_FLY_WIDGET_STATUS)
+  set(NICE_VIEW_UPSTREAM_DIR ${CMAKE_SOURCE_DIR}/boards/shields/nice_view)
+
+  zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
+  zephyr_library_include_directories(${NICE_VIEW_UPSTREAM_DIR}/widgets)
+  zephyr_library_sources(custom_status_screen.c)
+  zephyr_library_sources(${NICE_VIEW_UPSTREAM_DIR}/widgets/bolt.c)
+  zephyr_library_sources(${NICE_VIEW_UPSTREAM_DIR}/widgets/util.c)
+
+  if(NOT CONFIG_ZMK_SPLIT OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+    zephyr_library_sources(${NICE_VIEW_UPSTREAM_DIR}/widgets/status.c)
+  else()
+    zephyr_library_sources(widgets/art.c)
+    zephyr_library_sources(${NICE_VIEW_UPSTREAM_DIR}/widgets/peripheral_status.c)
+  endif()
+endif()

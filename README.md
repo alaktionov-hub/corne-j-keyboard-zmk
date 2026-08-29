@@ -13,10 +13,16 @@ This repository builds ZMK firmware for the Eyelash Peripherals Corne J keyboard
 
 The build matrix produces firmware for:
 
-- the left half with Nice!View;
-- the right half with Nice!View;
+- the left half with the standard Nice!View status screen;
+- the right half with the custom `FLY` Nice!View artwork;
 - the left half with ZMK Studio enabled;
 - a `settings_reset` image for `nice_nano_v2`.
+
+## Nice!View artwork
+
+The `nice_view_fly` shield keeps the standard peripheral battery and connection indicators while replacing the randomly selected balloon or mountain with a fixed monochrome `FLY` emblem. The artwork is stored as a native 1-bit `140x68` LVGL image in `boards/shields/nice_view_fly/widgets/art.c`.
+
+Only the right half uses this shield. Flash the right-hand firmware artifact to test or update the artwork; the left half remains on the standard `nice_view` shield.
 
 ## Keymap
 
