@@ -56,7 +56,7 @@
 
         softoff {
             bindings = <&soft_off>;
-            key-positions = <1 15 29>;
+            key-positions = <1 17 31>;
         };
     };
 
@@ -386,7 +386,7 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "NAV";
             bindings = <
 &kp ESC  &none       &none      &none             &none         &none                            &none         &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp LC(BACKSPACE)  &kp BACKSPACE
 &none    &none       &none      &none             &none         &kp PRINTSCREEN           &none  &none  &none  &kp PAGE_DOWN  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &kp LC(DELETE)     &kp DELETE
@@ -410,6 +410,7 @@
         };
 
         layer_8 {
+            display-name = "BT / RGB";
             bindings = <
 &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &out OUT_USB                    &none         &rgb_ug RGB_ON                    &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &trans  &trans
 &trans        &trans        &trans        &trans        &trans      &trans                   &none  &none  &none  &rgb_ug RGB_OFF                   &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &trans  &trans
@@ -419,6 +420,7 @@
         };
 
         layer_5 {
+            display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &none         &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans           &none  &none  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
@@ -428,6 +430,7 @@
         };
 
         tmux {
+            display-name = "TMUX";
             bindings = <
 &tmux_kill_pane  &tmux_win_1  &tmux_win_2  &tmux_win_3  &tmux_4_rename       &tmux_win_5                            &none         &tmux_win_6        &tmux_win_7  &tmux_win_8  &tmux_win_9  &tmux_win_0  &trans
 &trans           &trans       &tmux_list   &trans       &trans               &trans                          &none  &none  &none  &tmux_h_move_left  &tmux_down   &tmux_up     &tmux_right  &trans       &trans
