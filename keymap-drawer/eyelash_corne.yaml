@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {t: '$$mdi:keyboard-tab$$', h: '5'}
+  - {t: '$$mdi:keyboard-tab$$', h: Mouse}
   - '&esc_q'
   - W
   - E
@@ -13,8 +13,8 @@ layers:
   - I
   - O
   - P
-  - {t: '[', h: tmux, s: '{'}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: '8'}
+  - {t: '[', h: TMUX, s: '{'}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: BT / RGB}
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
@@ -47,7 +47,7 @@ layers:
   - NUMBER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', h: SYMBOL}
+  - {t: '$$mdi:backspace$$', h: NAV}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   NUMBER:
   - '&tilda_grave'
@@ -98,7 +98,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - HOME
   - END
-  SYMBOL:
+  NAV:
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -145,8 +145,8 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: SYMBOL, type: held}
-  - SYMBOL
+  - {t: NAV, type: held}
+  - NAV
   Fn:
   - $$mdi:keyboard-esc$$
   - F1
@@ -195,8 +195,8 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - NUMBER
-  - {t: SYMBOL, type: held}
-  '8':
+  - {t: NAV, type: held}
+  BT / RGB:
   - OUT BLE
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -245,7 +245,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  '5':
+  Mouse:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -294,7 +294,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  tmux:
+  TMUX:
   - '&tmux_kill_pane'
   - '&tmux_win_1'
   - '&tmux_win_2'
@@ -344,5 +344,5 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [1, 15, 29]
+- p: [1, 17, 31]
   k: '&soft_off'
